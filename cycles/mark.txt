@@ -1,0 +1,12 @@
+模块的循环依赖
+模块a导出未完成的模块副本给模块b，打破依赖的死循环
+输出结果如下：
+
+main starting
+a starting
+b starting
+in b, a.done = false
+b done
+in a, b.done = true
+a done
+in main, a.done = true, b.done = true
